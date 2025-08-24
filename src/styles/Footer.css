@@ -1,0 +1,26 @@
+.footer {
+    background: #003366;
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer p {
+    margin: 0.5rem 0;
+}
+
+.footer a {
+    color: #F66320;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: #ff8544;
+    text-decoration: underline;
+}

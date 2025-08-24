@@ -1,0 +1,109 @@
+.our-equipments {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease-out;
+}
+
+.our-equipments.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.our-equipments h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #333;
+    font-size: 2rem;
+}
+
+.equipment-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.equipment-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.visible .equipment-card {
+    opacity: 1;
+    transform: translateY(0);
+    animation: fadeInUp 0.5s ease-out forwards;
+}
+
+.equipment-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.equipment-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.equipment-card h3 {
+    padding: 1rem;
+    margin: 0;
+    text-align: center;
+    color: #F66320;
+    font-size: 1.2rem;
+}
+
+.equipment-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(246, 99, 32, 0.2);
+}
+
+.equipment-card:hover img {
+    transform: scale(1.05);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.equipment-card:nth-child(1) { animation-delay: 0.1s; }
+.equipment-card:nth-child(2) { animation-delay: 0.2s; }
+.equipment-card:nth-child(3) { animation-delay: 0.3s; }
+.equipment-card:nth-child(4) { animation-delay: 0.4s; }
+.equipment-card:nth-child(5) { animation-delay: 0.5s; }
+.equipment-card:nth-child(6) { animation-delay: 0.6s; }
+.equipment-card:nth-child(7) { animation-delay: 0.7s; }
+.equipment-card:nth-child(8) { animation-delay: 0.8s; }
+.equipment-card:nth-child(9) { animation-delay: 0.9s; }
+
+@media (max-width: 768px) {
+    .our-equipments {
+        padding: 2rem 1rem;
+    }
+
+    .equipment-grid {
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 1.5rem;
+    }
+
+    .equipment-image {
+        height: 180px;
+    }
+}

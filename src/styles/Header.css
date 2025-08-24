@@ -1,0 +1,159 @@
+-modern-projects-landing\src\styles\Header.css
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    height: 60px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.logo {
+    height: 150px;
+    width: auto;
+        filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg) brightness(118%) contrast(119%);
+
+}
+.logopic {
+    height: 40px;
+    width: auto;
+    /* Orange color filter */
+    filter: invert(45%) sepia(85%) saturate(1632%) hue-rotate(347deg) brightness(99%) contrast(95%);
+}
+
+/* For a different shade of orange, you can try these alternatives: */
+
+/* Darker Orange */
+/* filter: invert(48%) sepia(94%) saturate(1862%) hue-rotate(347deg) brightness(98%) contrast(101%); */
+
+/* Lighter Orange */
+/* filter: invert(72%) sepia(87%) saturate(861%) hue-rotate(325deg) brightness(101%) contrast(101%); */
+.company-name {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+}
+
+.company-name h1 {
+    font-size: 1.2rem;
+    margin: 0;
+    color: white;
+    line-height: 1;
+}
+
+.company-name h2 {
+    font-size: 0.7rem;
+    margin: 0;
+    color: white;
+    line-height: 1;
+}
+
+.menu-button {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #F66320;
+    padding: 0.5rem;
+}
+
+.navigation ul {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: #333;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navigation a:hover {
+    color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .header {
+        height: 50px;
+    }
+
+    .menu-button {
+        display: block;
+    }
+
+    .navigation {
+        position: fixed;
+        top: 70px;
+        right: -100%;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background: #003366;
+        transition: all 0.3s ease-in-out;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .navigation.active {
+        right: 0;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .navigation ul {
+        flex-direction: column;
+        padding: 2rem;
+    }
+
+    .navigation li {
+        width: 100%;
+        margin: 1rem 0;
+    }
+
+    .navigation a {
+        display: block;
+        padding: 1rem;
+        text-align: center;
+        font-size: 1.1rem;
+    }
+
+    .company-name h1 {
+        font-size: 1rem;
+
+    }
+
+    .company-name h2 {
+        font-size: 0.6rem;
+    }
+
+    .logo {
+        height: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .company-name h2 {
+        display: none;
+    }
+
+    .logo {
+        height: 25px;
+    }
+}

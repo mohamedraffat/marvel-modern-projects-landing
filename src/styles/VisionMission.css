@@ -1,0 +1,131 @@
+.vision-mission {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.vision-mission.visible {
+  opacity: 1;
+}
+
+.vision-mission-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.box {
+  background: white;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(246, 99, 32, 0.2);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease-out;
+  cursor: pointer;
+}
+
+.visible .box {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.visible .box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 12px rgba(246, 99, 32, 0.2);
+  border-color: #F66320;
+  background: linear-gradient(
+    to bottom right,
+    rgba(246, 99, 32, 0.05),
+    rgba(246, 99, 32, 0.1)
+  );
+}
+
+.visible .box:hover h2 {
+  transform: scale(1.05);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.visible .vision {
+  transition-delay: 0.2s;
+}
+
+.visible .mission {
+  transition-delay: 0.4s;
+}
+
+.box h2 {
+  color: #F66320;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-size: 1.8rem;
+  transition: transform 0.3s ease;
+}
+
+.box p {
+  color: #444;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.slogan {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #333;
+  margin-top: 3rem;
+  font-style: italic;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease-out;
+  cursor: pointer;
+  padding: 1rem 2rem;
+  border: 2px solid transparent;
+}
+
+.visible .slogan {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.6s;
+}
+
+.visible .slogan:hover {
+  animation: growAndGlow 1s ease-in-out forwards;
+  border-color: #F66320;
+}
+
+@keyframes growAndGlow {
+  0% {
+    transform: scale(1);
+    text-shadow: none;
+  }
+  100% {
+    transform: scale(1.2);
+    color: #F66320;
+    text-shadow: 0 0 10px rgba(246, 99, 32, 0.3);
+  }
+}
+
+@media (max-width: 768px) {
+  .vision-mission {
+    padding: 3rem 1rem;
+  }
+
+  .box {
+    padding: 1.5rem;
+  }
+
+  .box h2 {
+    font-size: 1.5rem;
+  }
+
+  .slogan {
+    font-size: 1.2rem;
+    margin-top: 2rem;
+    padding: 0.8rem 1.6rem;
+    border: 2px solid #F66320;
+  }
+}

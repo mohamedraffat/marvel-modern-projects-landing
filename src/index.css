@@ -1,0 +1,476 @@
+/* App.css */
+
+/* General Styles */
+:root {
+  --primary-color: #003366; /* Dark Blue */
+  --secondary-color: #f0f0f0; /* Light Grey for backgrounds */
+  --accent-color: #ff9900; /* Orange/Gold for accents */
+  --text-color: #333;
+  --light-text-color: #f8f8f8;
+  --dark-background: #1a1a1a;
+  --section-padding: 60px 40px;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Add margin-top to compensate for fixed header */
+main {
+  margin-top: 70px; /* Adjust this value based on your header height */
+  flex: 1;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--primary-color);
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 2.5em;
+  text-align: center;
+  margin-bottom: 40px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: var(--accent-color);
+  margin: 10px auto 0;
+}
+
+section {
+  padding: var(--section-padding);
+  margin-bottom: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  border-radius: 8px;
+}
+
+/* Header */
+.header {
+  background-color: var(--primary-color);
+  color: var(--light-text-color);
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 70px; /* Adjust as needed */
+  margin-right: 15px;
+}
+
+.company-name h1 {
+  font-size: 2.2em;
+  margin: 0;
+  color: var(--light-text-color);
+}
+
+.company-name p {
+  font-size: 0.9em;
+  margin: 0;
+  color: #ccc;
+}
+
+.company-name h2 {
+  font-size: 1.1em;
+  margin: 0;
+  color: var(--light-text-color);
+  font-weight: normal;
+}
+
+.navigation ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.navigation ul li {
+  margin-left: 30px;
+}
+
+.navigation ul li a {
+  color: var(--light-text-color);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1em;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+  padding-bottom: 5px;
+}
+
+.navigation ul li a:hover {
+  color: var(--accent-color);
+  border-bottom: 2px solid var(--accent-color);
+}
+
+/* Main Content Wrapper */
+main {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+/* About Us Section */
+.about-us {
+  background-color: #fcfcfc;
+  text-align: center;
+}
+
+.about-us p {
+  max-width: 800px;
+  margin: 15px auto;
+  font-size: 1.1em;
+  color: #555;
+}
+
+/* Key Principles */
+.key-principles {
+  background-color: var(--secondary-color);
+  text-align: center;
+}
+
+.key-principles ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.key-principles li {
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  text-align: left;
+  font-size: 1.05em;
+  line-height: 1.8;
+  border-left: 5px solid var(--accent-color);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.key-principles li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+
+/* Vision & Mission */
+.vision-mission {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  text-align: center;
+}
+
+.vision, .mission {
+  flex: 1;
+  min-width: 300px;
+  background-color: #fcfcfc;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.vision h2, .mission h2 {
+  color: var(--primary-color);
+  font-size: 2em;
+  margin-bottom: 15px;
+}
+
+.vision p, .mission p {
+  font-size: 1.1em;
+  color: #555;
+}
+
+.slogan {
+  width: 100%;
+  text-align: center;
+  font-size: 1.8em;
+  font-weight: bold;
+  color: var(--accent-color);
+  margin-top: 30px;
+  font-style: italic;
+}
+
+/* Proven Statistics */
+.proven-statistics {
+  background-color: var(--primary-color);
+  color: var(--light-text-color);
+  text-align: center;
+  padding: 80px 40px;
+  border-radius: 0; /* Remove rounded corners */
+  box-shadow: none; /* Remove shadow */
+  margin-bottom: 0; /* No margin at the bottom */
+}
+
+.proven-statistics h2 {
+  color: var(--light-text-color);
+}
+
+.proven-statistics h2::after {
+  background-color: var(--accent-color);
+}
+
+.proven-statistics ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.proven-statistics li {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 30px 20px;
+  border-radius: 8px;
+  font-size: 1.5em;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.proven-statistics li:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-5px);
+}
+
+/* Our Services & Our Equipments */
+.our-services, .our-equipments {
+  text-align: center;
+  background-color: var(--secondary-color);
+}
+
+.service-list, .equipment-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.service-item, .equipment-item {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding-bottom: 20px;
+}
+
+.service-item:hover, .equipment-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+.service-item img, .equipment-item img {
+  width: 100%;
+  height: 200px; /* Fixed height for images */
+  object-fit: cover; /* Ensures images cover the area without distortion */
+  border-bottom: 3px solid var(--accent-color);
+}
+
+.service-item h3, .equipment-item h3 {
+  font-size: 1.4em;
+  color: var(--primary-color);
+  margin: 20px 10px 0;
+}
+
+/* Aggregates Available Size & Our Products */
+.aggregates-size, .our-products {
+  text-align: center;
+  background-color: #fcfcfc;
+}
+
+.aggregates-size ul, .our-products ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.aggregates-size li, .our-products li {
+  background-color: var(--secondary-color);
+  padding: 15px 20px;
+  border-radius: 5px;
+  font-size: 1.1em;
+  font-weight: 600;
+  color: var(--primary-color);
+  border: 1px solid #ddd;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.aggregates-size li:hover, .our-products li:hover {
+  background-color: var(--accent-color);
+  color: var(--light-text-color);
+  transform: translateY(-3px);
+  border-color: var(--accent-color);
+}
+
+/* Our Clients */
+.our-clients {
+  background-color: var(--dark-background);
+  color: var(--light-text-color);
+  text-align: center;
+  padding: var(--section-padding);
+}
+
+.our-clients h2 {
+  color: var(--light-text-color);
+}
+
+.our-clients h2::after {
+  background-color: var(--accent-color);
+}
+
+.client-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.client-list span {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 15px 25px;
+  border-radius: 5px;
+  font-size: 1.1em;
+  font-weight: 500;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  cursor: default;
+}
+
+.client-list span:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+}
+
+/* Contact Us */
+.contact-us {
+  text-align: center;
+  background-color: var(--secondary-color);
+  padding-bottom: 80px; /* More padding at bottom */
+}
+
+.contact-us p {
+  font-size: 1.1em;
+  margin: 10px auto;
+  color: #555;
+}
+
+/* Footer */
+.footer {
+  background-color: var(--primary-color);
+  color: var(--light-text-color);
+  text-align: center;
+  padding: 25px 20px;
+  font-size: 0.9em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    text-align: center;
+    padding: 15px 20px;
+  }
+
+  .logo-container {
+    margin-bottom: 15px;
+  }
+
+  .navigation ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navigation ul li {
+    margin: 10px 0;
+  }
+
+  h2 {
+    font-size: 2em;
+  }
+
+  section {
+    padding: 40px 20px;
+  }
+
+  .vision-mission {
+    flex-direction: column;
+  }
+
+  .proven-statistics li {
+    font-size: 1.2em;
+  }
+
+  .service-list, .equipment-list {
+    grid-template-columns: 1fr;
+  }
+
+  .aggregates-size ul, .our-products ul {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .company-name h1 {
+    font-size: 1.8em;
+  }
+  .company-name h2 {
+    font-size: 0.9em;
+  }
+  .logo {
+    height: 50px;
+  }
+  h2 {
+    font-size: 1.8em;
+  }
+  .proven-statistics ul {
+    grid-template-columns: 1fr;
+  }
+  .key-principles ul {
+    grid-template-columns: 1fr;
+  }
+}
