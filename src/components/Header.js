@@ -35,7 +35,7 @@ function Header() {
                         className="logopic"
                     />
                     <div className="company-name">
-                        <h1>MVP</h1>
+                        <h1>MMP</h1>
                         <h2>MARVEL MODERN PROJECTS LLC</h2>
                     </div>
                 </a>
